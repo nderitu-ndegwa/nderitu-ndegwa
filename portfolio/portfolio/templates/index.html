@@ -1,0 +1,18 @@
+<!-- main/templates/main/index.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="welcome-message" style="opacity: 0;">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my projects and skills</p>
+  </div>
+
+  {% for project in projects %}
+    <div>
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description }}</p>
+      <p>Technologies: {{ project.technologies }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
